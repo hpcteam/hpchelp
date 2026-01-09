@@ -5,8 +5,8 @@ nav_order: 2
 ---
 
 
-#!/bin/bash
-#PBS -N interFoam_32
+#!/bin/bash |
+#PBS -N interFoam_32|
 #PBS -q workq
 #PBS -l select=1:ncpus=32:mpiprocs=32:mem=192gb
 #PBS -l walltime=144:00:00
