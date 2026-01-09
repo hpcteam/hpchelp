@@ -2,8 +2,10 @@
 title: Open Foam pbs
 parent: Documentation
 nav_order: 2
+---
 
----#!/bin/bash
+
+#!/bin/bash
 #PBS -N interFoam_32
 #PBS -q workq
 #PBS -l select=1:ncpus=32:mpiprocs=32:mem=192gb
