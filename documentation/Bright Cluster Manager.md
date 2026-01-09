@@ -1,4 +1,3 @@
-
 ---
 title: Brightcluster Mnager
 parent: Documentation
