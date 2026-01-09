@@ -6,4 +6,4 @@ nav_order: 2
 
 ## 📄 Reference Documents
 
-- [OpenFoam)](/assets/docs/)
+- [OpenFoam)](/assets/docs/OpenFoam.pbs)
