@@ -1,6 +1,8 @@
 #!/bin/bash
 
-DOC_ROOT="documentation"
+# Always work relative to this script location
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+DOC_ROOT="$SCRIPT_DIR"
 
 SECTION_NAME="$1"
 PAGES="$2"
@@ -13,15 +15,15 @@ fi
 
 SECTION_DIR="$DOC_ROOT/$SECTION_NAME"
 
-# Capitalize function
+# Capitalize function (scripts → Scripts)
 capitalize() {
   echo "$1" | sed -E 's/(^| )([a-z])/\U\2/g'
 }
 
 SECTION_TITLE=$(capitalize "$SECTION_NAME")
 
-# Count existing sections for nav_order
-SECTION_ORDER=$(find "$DOC_ROOT" -maxdepth 1 -type d | wc -l)
+# Auto nav_order based on existing sections
+SECTION_ORDER=$(find "$DOC_ROOT" -mindepth 1 -maxdepth 1 -type d | wc -l)
 
 echo "📁 Creating section: $SECTION_TITLE"
 
@@ -43,7 +45,7 @@ EOF
 
 echo "✅ Created index.md"
 
-# Create pages if provided
+# Create pages
 PAGE_ORDER=1
 for PAGE in $PAGES; do
   PAGE_FILE="$SECTION_DIR/$PAGE.md"
