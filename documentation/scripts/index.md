@@ -1,6 +1,6 @@
 ---
 title: sample scripts
-parent: documentation
+parent: Documentation
 has_children: true
 nav_order: 2
 
