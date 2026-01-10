@@ -1,6 +1,6 @@
 ---
 title: 📜 Openfoam-sample-script
-parent: documentation
+parent: Documentation
 ---
 
 # 📜 Openfoam-sample-script
