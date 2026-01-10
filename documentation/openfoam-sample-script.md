@@ -27,7 +27,7 @@ source /home/softwares/OpenFOAM-v2112_build/OpenFOAM-v2112/etc/bashrc
 echo "===== ENV CHECK =====" 
 which mpirun 
 which icoFoam 
-ldd $(whichmpirun) | grep ucx 
+ldd $(which mpirun) | grep ucx 
 ldd $(which icoFoam) | grep mpi echo
 "====================="
 
