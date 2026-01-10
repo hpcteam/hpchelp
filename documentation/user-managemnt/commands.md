@@ -1,5 +1,5 @@
 ---
 title: commands
-paraent: user-managemnt
+parent: user-managemnt
 nav_order: 2
 ---
